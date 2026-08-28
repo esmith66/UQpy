@@ -336,3 +336,20 @@ The :class:`.Uniform` class is imported using the following command:
 >>> from UQpy.distributions.collection.Uniform import Uniform
 
 .. autoclass:: UQpy.distributions.collection.Uniform
+
+_______
+
+Triangular
+"""""""
+
+Triangular distribution having probability density function
+
+.. math:: f(x|a, b, c) = \begin{cases} \dfrac{2(x-a)}{(b-a)(c-a)}, & a \le x \le c \\ \dfrac{2(b-x)}{(b-a)(b-c)}, & c \le x \le b \end{cases}
+
+where :math:`loc=a`, :math:`scale=b`, and :math:`c` is the mode of the distribution.
+
+The :class:`.Triangular` class is imported using the following command:
+
+>>> from UQpy.distributions.collection.Triangular import Triangular
+
+.. autoclass:: UQpy.distributions.collection.Triangular
