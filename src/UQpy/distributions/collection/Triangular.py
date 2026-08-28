@@ -8,7 +8,7 @@ class Triangular(DistributionContinuous1D):
     @beartype
     def __init__(
         self, 
-        c: Union[None, float, int] = 0.5,
+        c: Union[None, float, int],
         loc: Union[None, float, int] = 0.0,
         scale: Union[None, float, int] = 1.0
     ):
@@ -19,6 +19,6 @@ class Triangular(DistributionContinuous1D):
         :param loc: The location parameter.
         :param scale: The scale parameter.
         """
-        super().__init__(loc=loc, scale=scale, ordered_parameters=("c", "loc", "scale"))
+        super().__init__(c=c,loc=loc, scale=scale, ordered_parameters=("c", "loc", "scale"))
         self._construct_from_scipy(scipy_name=stats.triang)
 

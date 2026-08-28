@@ -74,6 +74,10 @@ def test_truncated_normal():
         TruncatedNormal(a=-1.0, b=1.0).cdf(x=0.8), 0.922, atol=1e-3
     )
 
+def test_triangular():
+    np.testing.assert_allclose(
+        Triangular(c=0.5, loc=0.0, scale=1.0).cdf(x=0.8), 0.920, atol=1e-3
+    )
 
 # For multinomial, mvnormal, more tests are needed
 
